@@ -13,6 +13,9 @@ public class BounceBallControl extends Application {
   public void start(Stage primaryStage) {
     BallPane ballPane = new BallPane(); // Create a ball pane
 
+    //Click and add the ball on the track
+    ballPane.setOnMouseClicked(e -> ballPane.ballTrack());
+
     // Pause and resume animation
     ballPane.setOnMousePressed(e -> ballPane.pause());
     ballPane.setOnMouseReleased(e -> ballPane.play());
