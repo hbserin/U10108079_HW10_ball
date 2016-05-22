@@ -28,6 +28,14 @@ public class BallPane extends Pane {
     animation.setCycleCount(Timeline.INDEFINITE);
     animation.play(); // Start animation
   }
+  
+  //Create a circle on the track
+	public void ballTrack(){
+		Circle ball = new Circle(x, y, radius);
+		ball.setFill(Color.web("rgba(255,255,255,0)"));	// alpha = 0
+		ball.setStroke(Color.rgb(0,0,0)); // Set ball color
+		getChildren().add(ball); // Place a ball into this pane
+	}
 
   public void play() {
     animation.play();
